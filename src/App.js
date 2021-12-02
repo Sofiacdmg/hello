@@ -20,7 +20,7 @@ const App = () => {
     window.localStorage.setItem("timestamp", Date.now()); // if no timestamp, sets it to now
   }
   
-  const userId = window.localStorage.currentUser;
+  const userId = window.localStorage.currentUser || "1234";
   const currentTime = parseInt(window.localStorage.timestamp);
 
   window.Appcues.identify(userId, { // feel free to add in any user properties here
